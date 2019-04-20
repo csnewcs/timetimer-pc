@@ -1,0 +1,17 @@
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\timetimer pc.exe.config
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\timetimer pc.exe
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\timetimer pc.pdb
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\MetroFramework.Design.dll
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\MetroFramework.dll
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer pc.csprojAssemblyReference.cache
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer_pc.Form1.resources
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer_pc.Properties.Resources.resources
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer pc.csproj.GenerateResource.cache
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer pc.csproj.CoreCompileInputs.cache
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer pc.csproj.CopyComplete
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer pc.exe
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug\timetimer pc.pdb
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\Newtonsoft.Json.xml
