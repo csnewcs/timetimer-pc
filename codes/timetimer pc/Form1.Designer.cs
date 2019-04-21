@@ -31,9 +31,9 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroPanel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -59,29 +59,13 @@
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(3, 3);
+            this.metroCheckBox1.Location = new System.Drawing.Point(0, 4);
             this.metroCheckBox1.Name = "metroCheckBox1";
             this.metroCheckBox1.Size = new System.Drawing.Size(179, 15);
             this.metroCheckBox1.TabIndex = 4;
             this.metroCheckBox1.Text = "시계 아래에 디지털 시계 표시";
             this.metroCheckBox1.UseSelectable = true;
             this.metroCheckBox1.CheckedChanged += new System.EventHandler(this.metroCheckBox1_CheckedChanged);
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.metroComboBox1);
-            this.metroPanel1.Controls.Add(this.metroCheckBox1);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(12, 12);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(252, 89);
-            this.metroPanel1.TabIndex = 5;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            this.metroPanel1.Visible = false;
             // 
             // metroComboBox1
             // 
@@ -90,7 +74,7 @@
             this.metroComboBox1.Items.AddRange(new object[] {
             "영어 (English)",
             "한글 (Korean)"});
-            this.metroComboBox1.Location = new System.Drawing.Point(3, 38);
+            this.metroComboBox1.Location = new System.Drawing.Point(0, 25);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(179, 29);
             this.metroComboBox1.Sorted = true;
@@ -98,19 +82,29 @@
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.metroCheckBox1);
+            this.panel1.Controls.Add(this.metroComboBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(218, 66);
+            this.panel1.TabIndex = 7;
+            this.panel1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -120,8 +114,8 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
