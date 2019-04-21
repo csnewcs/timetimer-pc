@@ -69,6 +69,9 @@ namespace timetimer_pc
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            listBox1.SetSelected(1, true);
+            listBox2.SetSelected(0, true);
+            listBox1.SetSelected(0, true);
             JObject set = JObject.Parse(readjson);
             if (set["language"].ToString() == "Korean")
             {
@@ -97,8 +100,39 @@ namespace timetimer_pc
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int a = int.Parse(listBox1.Text);
-            int b = int.Parse(listBox2.Text);
+            JObject set = JObject.Parse(readjson);
+            int a = listBox1.SelectedIndex * 60;
+            int b = listBox2.SelectedIndex;
+            if (a + b > 3600)
+            {
+                if (set["language"].ToString() == "Korean")
+                {
+                    MessageBox.Show("이 타이머는 최대 60분 0초까지 설정 가능합니다.","범위 초과");
+                    listBox2.SetSelected(0, true);
+                }
+            }
+            else circularProgressBar1.Value = a + b;
+        }
+
+        private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            JObject set = JObject.Parse(readjson);
+            int a = listBox1.SelectedIndex * 60;
+            int b = listBox2.SelectedIndex ;
+            if (a + b > 3600)
+            {
+                if (set["language"].ToString() == "Korean")
+                {
+                    MessageBox.Show("이 타이머는 최대 60분 0초까지 설정 가능합니다.","범위 초과");
+                    listBox2.SetSelected(0, true);
+                }
+            }
+            else circularProgressBar1.Value = a + b;
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

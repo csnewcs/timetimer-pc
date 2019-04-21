@@ -34,12 +34,12 @@
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +114,88 @@
             this.panel2.Size = new System.Drawing.Size(423, 348);
             this.panel2.TabIndex = 8;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("DX영화자막 M", 15F);
+            this.label2.Location = new System.Drawing.Point(259, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 22);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "초";
+            // 
+            // listBox2
+            // 
+            this.listBox2.Font = new System.Drawing.Font("Microsoft YaHei", 15F);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 27;
+            this.listBox2.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.listBox2.Location = new System.Drawing.Point(175, 249);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(78, 31);
+            this.listBox2.TabIndex = 10;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.ListBox2_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,6 +212,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 27;
             this.listBox1.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -204,6 +287,7 @@
             this.metroButton3.TabIndex = 9;
             this.metroButton3.Text = "시작";
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // circularProgressBar1
             // 
@@ -235,86 +319,7 @@
             this.circularProgressBar1.SuperscriptText = "";
             this.circularProgressBar1.TabIndex = 0;
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            // 
-            // listBox2
-            // 
-            this.listBox2.Font = new System.Drawing.Font("Microsoft YaHei", 15F);
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 27;
-            this.listBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59"});
-            this.listBox2.Location = new System.Drawing.Point(175, 249);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(78, 31);
-            this.listBox2.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("DX영화자막 M", 15F);
-            this.label2.Location = new System.Drawing.Point(259, 258);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 22);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "초";
+            this.circularProgressBar1.Value = 68;
             // 
             // Form1
             // 
