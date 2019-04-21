@@ -22,11 +22,13 @@ namespace timetimer_pc
         private void metroButton2_Click(object sender, EventArgs e)
         {
             panel1.Show();
+            panel2.Hide();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             panel1.Hide();
+            panel2.Show();
         }
 
         private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -60,7 +62,7 @@ namespace timetimer_pc
                 metroButton1.Text = "Main page";
                 metroButton2.Text = "Setting";
                 metroCheckBox1.Text = "Show digital clock under the watch";
-                set["languagae"] = "English";
+                set["language"] = "English";
                 File.WriteAllText(@"data\setting.json", set.ToString());
             }
         }
@@ -72,24 +74,31 @@ namespace timetimer_pc
             {
                 metroButton1.Text = "시작 화면";
                 metroButton2.Text = "설정";
-                metroCheckBox1.Text = "시계 아래에 디지털 시계 표시";
+                metroCheckBox1.Text = "디지털 타이머 표시";
                 metroComboBox1.Text = "한글 (Korean)";
             }
             else if (set["language"].ToString() == "English")
             {
                 metroButton1.Text = "Main page";
                 metroButton2.Text = "Setting";
-                metroCheckBox1.Text = "Show digital clock under the watch";
+                metroCheckBox1.Text = "Show digital timer";
                 metroComboBox1.Text = "영어 (English)";
             }
             if ((bool)set["showwatch"])
             {
                 metroCheckBox1.Checked = true;
+
             }
             else
             {
                 metroCheckBox1.Checked = false;
             }
+        }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = int.Parse(listBox1.Text);
+            int b = int.Parse(listBox2.Text);
         }
     }
 }

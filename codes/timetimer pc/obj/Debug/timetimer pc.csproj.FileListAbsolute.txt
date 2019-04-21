@@ -15,3 +15,5 @@ C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\obj\Debug
 C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\Newtonsoft.Json.dll
 C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\CircularProgressBar.dll
+C:\Users\hj666\Desktop\프로그래밍\timetimer-pc\codes\timetimer pc\bin\Debug\WinFormAnimation.dll
