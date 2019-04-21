@@ -118,7 +118,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("DX영화자막 M", 15F);
-            this.label2.Location = new System.Drawing.Point(259, 258);
+            this.label2.Location = new System.Drawing.Point(255, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 22);
             this.label2.TabIndex = 13;
@@ -190,7 +190,7 @@
             "57",
             "58",
             "59"});
-            this.listBox2.Location = new System.Drawing.Point(175, 249);
+            this.listBox2.Location = new System.Drawing.Point(171, 294);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(78, 31);
             this.listBox2.TabIndex = 10;
@@ -200,7 +200,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("DX영화자막 M", 15F);
-            this.label1.Location = new System.Drawing.Point(124, 258);
+            this.label1.Location = new System.Drawing.Point(127, 303);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 22);
             this.label1.TabIndex = 11;
@@ -273,7 +273,7 @@
             "58",
             "59",
             "60"});
-            this.listBox1.Location = new System.Drawing.Point(40, 249);
+            this.listBox1.Location = new System.Drawing.Point(43, 294);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(78, 31);
             this.listBox1.TabIndex = 10;
@@ -281,7 +281,7 @@
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(293, 249);
+            this.metroButton3.Location = new System.Drawing.Point(315, 280);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(75, 31);
             this.metroButton3.TabIndex = 9;

@@ -54,6 +54,8 @@ namespace timetimer_pc
                 metroButton1.Text = "시작 화면";
                 metroButton2.Text = "설정";
                 metroCheckBox1.Text = "시계 아래에 디지털 시계 표시";
+                label1.Text = "분";
+                label2.Text = "초";
                 set["language"] = "Korean";
                 File.WriteAllText(@"data\setting.json",set.ToString());
             }
@@ -62,6 +64,8 @@ namespace timetimer_pc
                 metroButton1.Text = "Main page";
                 metroButton2.Text = "Setting";
                 metroCheckBox1.Text = "Show digital clock under the watch";
+                label1.Text = "M";
+                label2.Text = "S";
                 set["language"] = "English";
                 File.WriteAllText(@"data\setting.json", set.ToString());
             }
@@ -79,6 +83,8 @@ namespace timetimer_pc
                 metroButton2.Text = "설정";
                 metroCheckBox1.Text = "디지털 타이머 표시";
                 metroComboBox1.Text = "한글 (Korean)";
+                label1.Text = "분";
+                label2.Text = "초";
             }
             else if (set["language"].ToString() == "English")
             {
@@ -86,6 +92,8 @@ namespace timetimer_pc
                 metroButton2.Text = "Setting";
                 metroCheckBox1.Text = "Show digital timer";
                 metroComboBox1.Text = "영어 (English)";
+                label1.Text = "M";
+                label2.Text = "S";
             }
             if ((bool)set["showwatch"])
             {
