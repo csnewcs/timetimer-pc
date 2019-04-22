@@ -41,6 +41,7 @@
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -94,11 +95,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.metroComboBox2);
             this.panel1.Controls.Add(this.metroCheckBox1);
             this.panel1.Controls.Add(this.metroComboBox1);
             this.panel1.Location = new System.Drawing.Point(12, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 66);
+            this.panel1.Size = new System.Drawing.Size(218, 106);
             this.panel1.TabIndex = 7;
             this.panel1.Visible = false;
             // 
@@ -342,6 +344,24 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "0:0";
             // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "빨강",
+            "노랑",
+            "초록",
+            "파랑",
+            "검정",
+            "하양"});
+            this.metroComboBox2.Location = new System.Drawing.Point(0, 60);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(179, 29);
+            this.metroComboBox2.TabIndex = 7;
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.MetroComboBox2_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -379,6 +399,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
     }
 }
 

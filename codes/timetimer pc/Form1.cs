@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Linq;
-using System.Text;
+using System.Drawing;
 using System.IO;
 using MetroFramework.Forms;
 using System.Threading.Tasks;
@@ -192,7 +192,33 @@ namespace timetimer_pc
 
         private void formsize(object sender, EventArgs e)
         {
-            decimal 
+            decimal a;
+        }
+
+        private void MetroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = metroComboBox2.SelectedIndex;
+            switch(a)
+            {
+                case 0:
+                    circularProgressBar1.ProgressColor = Color.Red;
+                    break;
+                case 1:
+                    circularProgressBar1.ProgressColor = Color.Yellow;
+                    break;
+                case 2:
+                    circularProgressBar1.ProgressColor = Color.Green;
+                    break;
+                case 3:
+                    circularProgressBar1.ProgressColor = Color.Blue;
+                    break;
+                case 4:
+                    circularProgressBar1.ProgressColor = Color.Black;
+                    break;
+                case 5:
+                    circularProgressBar1.ProgressColor = Color.White;
+                    break;
+            }
         }
     }
 }
