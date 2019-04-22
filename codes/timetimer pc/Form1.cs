@@ -130,7 +130,11 @@ namespace timetimer_pc
                     listBox2.SetSelected(0, true);
                 }
             }
-            else circularProgressBar1.Value = a + b;
+            else
+            {
+                circularProgressBar1.Value = a + b;
+                label3.Text = $"{a / 60}:{b}";
+            }
         }
 
         private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,7 +146,7 @@ namespace timetimer_pc
             {
                 if (set["language"].ToString() == "Korean")
                 {
-                    MessageBox.Show("이 타이머는 최대 60분 0초까지 설정 가능합니다.","범위 초과");
+                    MessageBox.Show("이 타이머는 최대 60분 0초까지 설정 가능합니다.", "범위 초과");
                     listBox2.SetSelected(0, true);
                 }
                 else if (set["language"].ToString() == "English")
@@ -151,18 +155,25 @@ namespace timetimer_pc
                     listBox2.SetSelected(0, true);
                 }
             }
-            else circularProgressBar1.Value = a + b;
+            else
+            {
+                circularProgressBar1.Value = a + b;
+                label3.Text = $"{a / 60}:{b}";
+            }
         }
 
         private async void metroButton3_Click(object sender, EventArgs e)
         {
             metroButton3.Enabled = false;
             int a = listBox1.SelectedIndex * 60 + listBox2.SelectedIndex;
+            int b = 0;
+            int c = 0;
             listBox1.Enabled = false;
             listBox2.Enabled = false;
-            for (;a > 0;--a)
+            for (;a >= 0; --a)
             {
                 circularProgressBar1.Value = a;
+                label3.Text = $"{a / 60}:{a % 60}";
                 await Task.Delay(1000);
             }
             metroButton3.Enabled = true;
@@ -177,6 +188,11 @@ namespace timetimer_pc
             {
                 MessageBox.Show("Time out", "Finish");
             }
+        }
+
+        private void formsize(object sender, EventArgs e)
+        {
+            decimal 
         }
     }
 }
