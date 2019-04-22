@@ -38,11 +38,13 @@ namespace timetimer_pc
             {
                 set["showwatch"] = true;
                 File.WriteAllText(@"data\setting.json", set.ToString());
+                label3.Show();
             }
             else
             {
                 set["showwatch"] = false;
                 File.WriteAllText(@"data\setting.json", set.ToString());
+                label3.Hide();
             }
         }
 
@@ -53,23 +55,25 @@ namespace timetimer_pc
             {
                 metroButton1.Text = "시작 화면";
                 metroButton2.Text = "설정";
-                metroCheckBox1.Text = "시계 아래에 디지털 시계 표시";
+                metroCheckBox1.Text = "디지털 타이머 표시";
                 label1.Text = "분";
                 label2.Text = "초";
                 metroButton3.Text = "시작";
                 set["language"] = "Korean";
                 File.WriteAllText(@"data\setting.json",set.ToString());
+                readjson = File.ReadAllText(@"data\setting.json");
             }
             else if (metroComboBox1.Text == "영어 (English)")
             {
                 metroButton1.Text = "Main page";
                 metroButton2.Text = "Setting";
-                metroCheckBox1.Text = "Show digital clock under the watch";
+                metroCheckBox1.Text = "Show digital timer";
                 label1.Text = "M";
                 label2.Text = "S";
                 metroButton3.Text = "Start";
                 set["language"] = "English";
                 File.WriteAllText(@"data\setting.json", set.ToString());
+                readjson = File.ReadAllText(@"data\setting.json");
             }
         }
 
@@ -100,11 +104,11 @@ namespace timetimer_pc
             if ((bool)set["showwatch"])
             {
                 metroCheckBox1.Checked = true;
-
             }
             else
             {
                 metroCheckBox1.Checked = false;
+                label3.Hide();
             }
         }
 
@@ -118,6 +122,11 @@ namespace timetimer_pc
                 if (set["language"].ToString() == "Korean")
                 {
                     MessageBox.Show("이 타이머는 최대 60분 0초까지 설정 가능합니다.","범위 초과");
+                    listBox2.SetSelected(0, true);
+                }
+                else if (set["language"].ToString() == "English")
+                {
+                    MessageBox.Show("This timer can set 60h 0s", "overflow");
                     listBox2.SetSelected(0, true);
                 }
             }
@@ -136,13 +145,38 @@ namespace timetimer_pc
                     MessageBox.Show("이 타이머는 최대 60분 0초까지 설정 가능합니다.","범위 초과");
                     listBox2.SetSelected(0, true);
                 }
+                else if (set["language"].ToString() == "English")
+                {
+                    MessageBox.Show("This timer can set 60h 0s", "overflow");
+                    listBox2.SetSelected(0, true);
+                }
             }
             else circularProgressBar1.Value = a + b;
         }
 
-        private void metroButton3_Click(object sender, EventArgs e)
+        private async void metroButton3_Click(object sender, EventArgs e)
         {
-
+            metroButton3.Enabled = false;
+            int a = listBox1.SelectedIndex * 60 + listBox2.SelectedIndex;
+            listBox1.Enabled = false;
+            listBox2.Enabled = false;
+            for (;a > 0;--a)
+            {
+                circularProgressBar1.Value = a;
+                await Task.Delay(1000);
+            }
+            metroButton3.Enabled = true;
+            listBox1.Enabled = true;
+            listBox2.Enabled = true;
+            JObject set = JObject.Parse(readjson);
+            if (set["language"].ToString() == "Korean")
+            {
+                MessageBox.Show("타이머가 종료되었습니다.", "끝");
+            }
+            else if (set["language"].ToString() == "English")
+            {
+                MessageBox.Show("Time out", "Finish");
+            }
         }
     }
 }
