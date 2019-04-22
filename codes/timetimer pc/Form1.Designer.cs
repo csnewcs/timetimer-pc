@@ -117,10 +117,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("DX영화자막 M", 15F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.Location = new System.Drawing.Point(255, 303);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 22);
+            this.label2.Size = new System.Drawing.Size(27, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "초";
             // 
@@ -199,10 +199,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DX영화자막 M", 15F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.Location = new System.Drawing.Point(127, 303);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 22);
+            this.label1.Size = new System.Drawing.Size(27, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "분";
             // 
@@ -281,7 +281,7 @@
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(315, 280);
+            this.metroButton3.Location = new System.Drawing.Point(313, 294);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(75, 31);
             this.metroButton3.TabIndex = 9;

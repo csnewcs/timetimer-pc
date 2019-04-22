@@ -56,6 +56,7 @@ namespace timetimer_pc
                 metroCheckBox1.Text = "시계 아래에 디지털 시계 표시";
                 label1.Text = "분";
                 label2.Text = "초";
+                metroButton3.Text = "시작";
                 set["language"] = "Korean";
                 File.WriteAllText(@"data\setting.json",set.ToString());
             }
@@ -66,6 +67,7 @@ namespace timetimer_pc
                 metroCheckBox1.Text = "Show digital clock under the watch";
                 label1.Text = "M";
                 label2.Text = "S";
+                metroButton3.Text = "Start";
                 set["language"] = "English";
                 File.WriteAllText(@"data\setting.json", set.ToString());
             }
