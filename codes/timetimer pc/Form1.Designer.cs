@@ -33,15 +33,15 @@
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,12 +83,11 @@
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
             this.metroComboBox1.Items.AddRange(new object[] {
-            "영어 (English)",
-            "한글 (Korean)"});
+            "한글 (Korean)",
+            "영어 (English)"});
             this.metroComboBox1.Location = new System.Drawing.Point(0, 25);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(179, 29);
-            this.metroComboBox1.Sorted = true;
             this.metroComboBox1.TabIndex = 6;
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
@@ -104,6 +103,24 @@
             this.panel1.TabIndex = 7;
             this.panel1.Visible = false;
             // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "빨강",
+            "노랑",
+            "초록",
+            "파랑",
+            "검정",
+            "하양"});
+            this.metroComboBox2.Location = new System.Drawing.Point(0, 60);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(179, 29);
+            this.metroComboBox2.TabIndex = 7;
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.MetroComboBox2_SelectedIndexChanged);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
@@ -117,6 +134,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 348);
             this.panel2.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label3.Font = new System.Drawing.Font("굴림", 15F);
+            this.label3.Location = new System.Drawing.Point(188, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "0:0";
             // 
             // label2
             // 
@@ -330,37 +360,6 @@
             this.circularProgressBar1.TabIndex = 0;
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label3.Font = new System.Drawing.Font("굴림", 15F);
-            this.label3.Location = new System.Drawing.Point(188, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "0:0";
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Items.AddRange(new object[] {
-            "빨강",
-            "노랑",
-            "초록",
-            "파랑",
-            "검정",
-            "하양"});
-            this.metroComboBox2.Location = new System.Drawing.Point(0, 60);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(179, 29);
-            this.metroComboBox2.TabIndex = 7;
-            this.metroComboBox2.UseSelectable = true;
-            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.MetroComboBox2_SelectedIndexChanged);
             // 
             // Form1
             // 

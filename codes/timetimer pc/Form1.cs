@@ -59,6 +59,10 @@ namespace timetimer_pc
                 label1.Text = "분";
                 label2.Text = "초";
                 metroButton3.Text = "시작";
+                metroComboBox2.Items.Clear();
+                string[] korean = new string[] {"빨강","노랑","초록","파랑","검정","하양" };
+                metroComboBox2.Items.AddRange(korean);
+
                 set["language"] = "Korean";
                 File.WriteAllText(@"data\setting.json",set.ToString());
                 readjson = File.ReadAllText(@"data\setting.json");
@@ -71,6 +75,10 @@ namespace timetimer_pc
                 label1.Text = "M";
                 label2.Text = "S";
                 metroButton3.Text = "Start";
+                metroComboBox2.Items.Clear();
+                string[] english = new string[] { "Red", "Yellow", "Green", "Blue", "Black", "White" };
+                metroComboBox2.Items.AddRange(english);
+
                 set["language"] = "English";
                 File.WriteAllText(@"data\setting.json", set.ToString());
                 readjson = File.ReadAllText(@"data\setting.json");
@@ -85,14 +93,9 @@ namespace timetimer_pc
             JObject set = JObject.Parse(readjson);
             if (set["language"].ToString() == "Korean")
             {
-                metroButton1.Text = "시작 화면";
-                metroButton2.Text = "설정";
-                metroCheckBox1.Text = "디지털 타이머 표시";
                 metroComboBox1.Text = "한글 (Korean)";
-                label1.Text = "분";
-                label2.Text = "초";
             }
-            else if (set["language"].ToString() == "English")
+            if (set["language"].ToString() == "English")
             {
                 metroButton1.Text = "Main page";
                 metroButton2.Text = "Setting";
@@ -100,6 +103,9 @@ namespace timetimer_pc
                 metroComboBox1.Text = "영어 (English)";
                 label1.Text = "M";
                 label2.Text = "S";
+                metroComboBox2.Items.Clear();
+                string[] english = new string[] { "Red", "Yellow", "Green", "Blue", "Black", "White" };
+                metroComboBox2.Items.AddRange(english);
             }
             if ((bool)set["showwatch"])
             {
