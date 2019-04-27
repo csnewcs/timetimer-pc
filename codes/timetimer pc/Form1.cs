@@ -243,9 +243,10 @@ namespace timetimer_pc
 
         private void formsize(object sender, EventArgs e)
         {
-            Point point = metroButton1.Location;
+            int x = metroButton1.Location.X;
+            int y = metroButton1.Location.Y;
             Size size = metroButton1.Size;
-            metroButton1.Location = repoint(point);
+            metroButton1.Location = repoint(x,y);
         }
 
         private void MetroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -282,8 +283,9 @@ namespace timetimer_pc
             File.WriteAllText(@"data\setting.json", color.ToString());
         }
 
-        private Point repoint(Point point)
+        private Point repoint(int x, int y)
         {
+            Point point = new Point(x, y);
             return point;
         }
         private Size resize(Size size)
