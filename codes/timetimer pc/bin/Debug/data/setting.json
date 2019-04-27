@@ -1,4 +1,5 @@
 {
-  "language": "Korean",
-  "showwatch": false
+  "language": "English",
+  "showwatch": true,
+  "color": "black"
 }

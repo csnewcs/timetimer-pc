@@ -59,10 +59,11 @@ namespace timetimer_pc
                 label1.Text = "분";
                 label2.Text = "초";
                 metroButton3.Text = "시작";
+                int a = metroComboBox2.SelectedIndex;
                 metroComboBox2.Items.Clear();
                 string[] korean = new string[] {"빨강","노랑","초록","파랑","검정","하양" };
                 metroComboBox2.Items.AddRange(korean);
-
+                metroComboBox2.SelectedIndex = a;
                 set["language"] = "Korean";
                 File.WriteAllText(@"data\setting.json",set.ToString());
                 readjson = File.ReadAllText(@"data\setting.json");
@@ -75,10 +76,11 @@ namespace timetimer_pc
                 label1.Text = "M";
                 label2.Text = "S";
                 metroButton3.Text = "Start";
+                int a = metroComboBox2.SelectedIndex;
                 metroComboBox2.Items.Clear();
                 string[] english = new string[] { "Red", "Yellow", "Green", "Blue", "Black", "White" };
                 metroComboBox2.Items.AddRange(english);
-
+                metroComboBox2.SelectedIndex = a;
                 set["language"] = "English";
                 File.WriteAllText(@"data\setting.json", set.ToString());
                 readjson = File.ReadAllText(@"data\setting.json");
@@ -94,6 +96,28 @@ namespace timetimer_pc
             if (set["language"].ToString() == "Korean")
             {
                 metroComboBox1.Text = "한글 (Korean)";
+
+                switch (set["color"].ToString())
+                {
+                    case "red":
+                        metroComboBox2.SelectedIndex = 0;
+                        break;
+                    case "yellow":
+                        metroComboBox2.SelectedIndex = 1;
+                        break;
+                    case "green":
+                        metroComboBox2.SelectedIndex = 2;
+                        break;
+                    case "blue":
+                        metroComboBox2.SelectedIndex = 3;
+                        break;
+                    case "black":
+                        metroComboBox2.SelectedIndex = 4;
+                        break;
+                    case "white":
+                        metroComboBox2.SelectedIndex = 5;
+                        break;
+                }
             }
             if (set["language"].ToString() == "English")
             {
@@ -106,6 +130,27 @@ namespace timetimer_pc
                 metroComboBox2.Items.Clear();
                 string[] english = new string[] { "Red", "Yellow", "Green", "Blue", "Black", "White" };
                 metroComboBox2.Items.AddRange(english);
+                switch (set["color"].ToString())
+                {
+                    case "red":
+                        metroComboBox2.SelectedIndex = 0;
+                        break;
+                    case "yellow":
+                        metroComboBox2.SelectedIndex = 1;
+                        break;
+                    case "green":
+                        metroComboBox2.SelectedIndex = 2;
+                        break;
+                    case "blue":
+                        metroComboBox2.SelectedIndex = 3;
+                        break;
+                    case "black":
+                        metroComboBox2.SelectedIndex = 4;
+                        break;
+                    case "white":
+                        metroComboBox2.SelectedIndex = 5;
+                        break;
+                }
             }
             if ((bool)set["showwatch"])
             {
@@ -203,28 +248,36 @@ namespace timetimer_pc
 
         private void MetroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            JObject color = JObject.Parse(readjson);
             int a = metroComboBox2.SelectedIndex;
             switch(a)
             {
                 case 0:
                     circularProgressBar1.ProgressColor = Color.Red;
+                    color["color"] = "red";
                     break;
                 case 1:
                     circularProgressBar1.ProgressColor = Color.Yellow;
+                    color["color"] = "yellow";
                     break;
                 case 2:
                     circularProgressBar1.ProgressColor = Color.Green;
+                    color["color"] = "green";
                     break;
                 case 3:
                     circularProgressBar1.ProgressColor = Color.Blue;
+                    color["color"] = "blue";
                     break;
                 case 4:
                     circularProgressBar1.ProgressColor = Color.Black;
+                    color["color"] = "black";
                     break;
                 case 5:
                     circularProgressBar1.ProgressColor = Color.White;
+                    color["color"] = "white";
                     break;
             }
+            File.WriteAllText(@"data\setting.json", color.ToString());
         }
     }
 }
