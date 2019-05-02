@@ -69,7 +69,7 @@
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(0, 4);
+            this.metroCheckBox1.Location = new System.Drawing.Point(1, 4);
             this.metroCheckBox1.Name = "metroCheckBox1";
             this.metroCheckBox1.Size = new System.Drawing.Size(125, 15);
             this.metroCheckBox1.TabIndex = 4;
@@ -85,7 +85,7 @@
             this.metroComboBox1.Items.AddRange(new object[] {
             "한글 (Korean)",
             "영어 (English)"});
-            this.metroComboBox1.Location = new System.Drawing.Point(0, 25);
+            this.metroComboBox1.Location = new System.Drawing.Point(1, 25);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(179, 29);
             this.metroComboBox1.TabIndex = 6;
@@ -114,7 +114,7 @@
             "파랑",
             "검정",
             "하양"});
-            this.metroComboBox2.Location = new System.Drawing.Point(0, 60);
+            this.metroComboBox2.Location = new System.Drawing.Point(1, 60);
             this.metroComboBox2.Name = "metroComboBox2";
             this.metroComboBox2.Size = new System.Drawing.Size(179, 29);
             this.metroComboBox2.TabIndex = 7;
@@ -142,7 +142,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label3.Font = new System.Drawing.Font("굴림", 15F);
-            this.label3.Location = new System.Drawing.Point(188, 109);
+            this.label3.Location = new System.Drawing.Point(194, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 20);
             this.label3.TabIndex = 14;
@@ -313,7 +313,7 @@
             "60"});
             this.listBox1.Location = new System.Drawing.Point(43, 294);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(78, 31);
+            this.listBox1.Size = new System.Drawing.Size(83, 31);
             this.listBox1.TabIndex = 10;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
@@ -333,10 +333,10 @@
             this.circularProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.circularProgressBar1.AnimationSpeed = 500;
-            this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.Font = new System.Drawing.Font("굴림", 72F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.circularProgressBar1.BackColor = System.Drawing.SystemColors.Control;
+            this.circularProgressBar1.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.Black;
+            this.circularProgressBar1.InnerColor = System.Drawing.SystemColors.Control;
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
             this.circularProgressBar1.Location = new System.Drawing.Point(92, 3);
@@ -348,10 +348,10 @@
             this.circularProgressBar1.OuterWidth = 26;
             this.circularProgressBar1.ProgressColor = System.Drawing.Color.Red;
             this.circularProgressBar1.ProgressWidth = 25;
-            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("굴림", 36F);
+            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("굴림", 1F);
             this.circularProgressBar1.Size = new System.Drawing.Size(240, 240);
             this.circularProgressBar1.StartAngle = 270;
-            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SubscriptColor = System.Drawing.SystemColors.Control;
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.circularProgressBar1.SubscriptText = ".23";
             this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -363,8 +363,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(576, 367);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -374,7 +373,7 @@
             this.Text = "Form1";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.SizeChanged += new System.EventHandler(this.formsize);
+            this.Resize += new System.EventHandler(this.formresize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

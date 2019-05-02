@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Drawing;
 using System.IO;
-using MetroFramework.Forms;
+using System.Windows.Forms.Design;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,7 +13,10 @@ namespace timetimer_pc
 {
     public partial class Form1 : Form
     {
-        string readjson = File.ReadAllText(@"data\setting.json");
+        private string readjson = File.ReadAllText(@"data\setting.json");
+        private float[] button1 = new float[4] { };
+        private float[] button2 = new float[4] { };
+
         public Form1()
         {
             InitializeComponent();
@@ -241,14 +244,6 @@ namespace timetimer_pc
             }
         }
 
-        private void formsize(object sender, EventArgs e)
-        {
-            int x = metroButton1.Location.X;
-            int y = metroButton1.Location.Y;
-            Size size = metroButton1.Size;
-            metroButton1.Location = repoint(x,y);
-        }
-
         private void MetroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             JObject color = JObject.Parse(readjson);
@@ -282,15 +277,9 @@ namespace timetimer_pc
             }
             File.WriteAllText(@"data\setting.json", color.ToString());
         }
+        private void formresize(object sender, EventArgs e)
+        {
 
-        private Point repoint(int x, int y)
-        {
-            Point point = new Point(x, y);
-            return point;
-        }
-        private Size resize(Size size)
-        {
-            return size;
         }
     }
 }
