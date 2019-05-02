@@ -14,8 +14,20 @@ namespace timetimer_pc
     public partial class Form1 : Form
     {
         private string readjson = File.ReadAllText(@"data\setting.json");
-        private float[] button1 = new float[4] { };
-        private float[] button2 = new float[4] { };
+        private float[] buttonone = new float[4] {0.7777f, 0.0197f, 0.1757f, 0.2044f };
+        private float[] buttontwo = new float[4] {0.7777f, 0.2611f, 0.1757f, 0.2044f};
+        private float[] panelone = new float[4] {0.0203f, 0.0197f, 0.3682f, 0.2611f };
+        private float[] checkboxone = new float[4] {0.0045f, 0.0377f, 0.5734f, 0.1415f };
+        private float[] comboboxone = new float[4] {0.0045f, 0.2358f, 0.8211f, 0.2736f };
+        private float[] comboboxtwo = new float[4] {0.0045f, 0.566f, 0.8211f, 0.2736f };
+        private float[] paneltwo = new float[4] {0.0203f, 0.0197f, 0.7145f, 0.8571f };
+        private float[] processone = new float[4] {0.2175f, 0.0086f, 0.5674f, 0.6897f };
+        private float[] listone = new float[4] {0.1017f, 0.8448f, 0.1844f, 0.0891f };
+        private float[] labelone = new float[4] {0.3002f, 0.8707f, 0.0638f, 0.0718f };
+        private float[] listtwo = new float[4] {0.4043f, 0.8448f, 0.1844f, 0.0891f };
+        private float[] labeltwo = new float[4] {0.6028f, 0.8707f, 0.0638f, 0.0718f };
+        private float[] buttonthree = new float[4] {0.734f, 0.8448f, 0.1773f, 0.0891f };
+        private float[] labelthree = new float[4] {0.4444f, 0.3132f, 0.0898f, 0.0575f };
 
         public Form1()
         {
@@ -279,7 +291,39 @@ namespace timetimer_pc
         }
         private void formresize(object sender, EventArgs e)
         {
+            int[] a = sizes(buttonone, Size);
+            metroButton1.Location = new Point(a[0], a[1]);
+            metroButton1.Size = new Size(a[2], a[3]);
 
+            a = sizes(buttontwo, Size);
+            metroButton2.Location = new Point(a[0], a[1]);
+            metroButton2.Size = new Size(a[2], a[3]);
+
+            a = sizes(panelone, Size);
+            panel1.Location = new Point(a[0], a[1]);
+            panel1.Size = new Size(a[2], a[3]);
+
+            a = sizes(checkboxone, panel1.Size);
+            metroCheckBox1.Location = new Point(a[0], a[1]);
+            metroCheckBox1.Size = new Size(a[2], a[3]);
+
+            a = sizes(comboboxone, panel1.Size);
+            metroComboBox1.Location = new Point(a[0], a[1]);
+            metroComboBox1.Size = new Size(a[2], a[3]);
+
+            a = sizes(comboboxtwo, panel1.Size);
+            metroComboBox2.Location = new Point(a[0], a[1]);
+            metroComboBox2.Size = new Size(a[2], a[3]);
+        }
+        private int[] sizes(float[] control, Size th)
+        {
+            float[] change = new float[4];
+            change[0] = th.Width * control[0];
+            change[1] = th.Height * control[1];
+            change[2] = th.Width * control[2];
+            change[3] = th.Height * control[3];
+            int[] turn = new int[4] {(int)Math.Round(change[0]), (int)Math.Round(change[1]), (int)Math.Round(change[2]), (int)Math.Round(change[3]) };
+            return turn;
         }
     }
 }
