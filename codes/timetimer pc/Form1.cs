@@ -314,6 +314,39 @@ namespace timetimer_pc
             a = sizes(comboboxtwo, panel1.Size);
             metroComboBox2.Location = new Point(a[0], a[1]);
             metroComboBox2.Size = new Size(a[2], a[3]);
+
+            a = sizes(paneltwo, Size);
+            panel2.Location = new Point(a[0], a[1]);
+            panel2.Size = new Size(a[2], a[3]);
+
+            a = sizes(processone, panel2.Size);
+            circularProgressBar1.Location = new Point(a[0], a[1]);
+            if (a[2] > a[3]) circularProgressBar1.Size = new Size(a[3], a[3]);
+            else circularProgressBar1.Size = new Size(a[2], a[2]);
+
+            a = sizes(listone, panel2.Size);
+            listBox1.Location = new Point(a[0], a[1]);
+            listBox1.Size = new Size(a[2], a[3]);
+            int pt = (listBox1.Size.Height - 31) / 27;
+            listBox1.Font = new Font(listBox1.Font.FontFamily,15+pt, FontStyle.Regular);
+
+            a = sizes(labelone, panel2.Size);
+            label1.Location = new Point(a[0], a[1]);
+            label1.Size = new Size(a[2], a[3]);
+            pt = (label1.Size.Height - 25) / 22;
+            label1.Font = new Font(label1.Font.FontFamily, 15 + pt, FontStyle.Regular);
+
+            a = sizes(listtwo, panel2.Size);
+            listBox2.Location = new Point(a[0], a[1]);
+            listBox2.Size = new Size(a[2], a[3]);
+            pt = (listBox2.Size.Height - 31) / 27;
+            listBox2.Font = new Font(listBox2.Font.FontFamily, 15 + pt, FontStyle.Regular);
+
+            a = sizes(labeltwo, panel2.Size);
+            label2.Location = new Point(a[0], a[1]);
+            label2.Size = new Size(a[2], a[3]);
+            pt = (label2.Size.Height - 25) / 22;
+            label2.Font = new Font(label2.Font.FontFamily, 15 + pt, FontStyle.Regular);
         }
         private int[] sizes(float[] control, Size th)
         {
