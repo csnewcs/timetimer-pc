@@ -347,6 +347,16 @@ namespace timetimer_pc
             label2.Size = new Size(a[2], a[3]);
             pt = (label2.Size.Height - 25) / 22;
             label2.Font = new Font(label2.Font.FontFamily, 15 + pt, FontStyle.Regular);
+
+            a = sizes(buttonthree, panel2.Size);
+            metroButton3.Location = new Point(a[0], a[1]);
+            metroButton3.Size = new Size(a[2], a[3]);
+
+            a = sizes(labelthree, panel2.Size);
+            label3.Location = new Point(a[0], a[1]);
+            label3.Size = new Size(a[2], a[3]);
+            pt = (label3.Size.Height - 25) / 22;
+            label3.Font = new Font(label3.Font.FontFamily, 15 + pt, FontStyle.Regular);
         }
         private int[] sizes(float[] control, Size th)
         {
